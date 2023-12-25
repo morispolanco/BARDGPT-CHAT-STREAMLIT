@@ -4,6 +4,7 @@ import google.generativeai as genai
 import re
 from PIL import Image
 import requests
+import os
 
 #Je t'aime plus que les mots,
 #Plus que les sentiments,
@@ -89,7 +90,7 @@ def load_modelvision() -> genai.GenerativeModel:
 
 #------------------------------------------------------------
 #CONFIGURATION
-genai.configure(api_key=st.secrets["GOOGLE_API_KEY"])
+os.environ['_BARD_API_KEY'] = "bAjcVAWV5diEbSb5Mmhk7u1wV06cKjVc5LMCLyWt4xPnIJTMDrULSF__pa-hcgFusHzTpQ."
 
 model = load_model()
 
